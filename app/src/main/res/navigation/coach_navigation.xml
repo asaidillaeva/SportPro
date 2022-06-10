@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/coach_navigation"
+    app:startDestination="@id/coachEventFragment">
+    <fragment
+        android:id="@+id/coachEventFragment"
+        android:name="com.kotlin.sportpro.ui.profile.coach.event.CoachEventFragment"
+        android:label="CoachEventFragment"
+       tools:layout="@layout/fragment_coach_event"
+        />
+    <fragment
+        android:id="@+id/coachSportsmanFragment"
+        android:name="com.kotlin.sportpro.ui.profile.coach.sportsman.CoachSportsmanFragment"
+        android:label="CoachSportsmanFragment"
+        tools:layout="@layout/fragment_coach_sportsman"/>
+</navigation>

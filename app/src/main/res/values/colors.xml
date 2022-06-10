@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="dark_gray">#B8B8B8</color>
+    <color name="gray_darkest">#898989</color>
+    <color name="black_gray">#1A1919</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="red">#ED2840</color>
+    <color name="gray">#E5E5E5</color>
+    <color name="mask">#707070</color>
+    <color name="seperator">#464545</color>
+    <color name="green">#219653</color>
+</resources>

@@ -1,0 +1,95 @@
+<resources>
+    <string name="app_name">Sport Pro</string>
+    <string name="home">Главная</string>
+    <string name="news">Новости</string>
+    <string name="event">Соревнования</string>
+    <string name="profile">Профиль</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="log_in_as">ВОЙТИ КАК</string>
+    <string name="coach">Тренер</string>
+    <string name="judge">Судья</string>
+    <string name="sportsman">Спортсмен</string>
+    <string name="phone_number">Телефон</string>
+    <string name="phone_default">XXXXXXXXX</string>
+    <string name="login">Войти</string>
+    <string name="code_infornation">На номер +996 777 77 77 77 отправлен код подтверждения</string>
+    <string name="code_">Код подтверждения</string>
+    <string name="write_in_code">-- -- --</string>
+    <string name="confirm">Подтвердить</string>
+    <string name="send_again">Запросить ещё раз</string>
+    <string name="log">Вход</string>
+    <string name="def">Баер снизит стоимость Кая Хаверца</string>
+    <string name="def_date">01.01.2021</string>
+    <string name="def_competiotion_title">Первенсто по Баскетболу </string>
+    <string name="def_sport_type">Баскетбол</string>
+    <string name="def_text">Новая модель организационной деятельности способствует подготовки и реализации системы обучения кадров, соответствует насущным потребностям.Значимость этих проблем настолько очевидна, что новая модель организационной .Повседневная практика показывает, что укрепление и развитие структуры в значительной степени обуславливает создание позиций, занимаемых участниками в отношении поставленных задач. Повседневная практика показывает, что рамки и место обучения кадров представляет собой интересный эксперимент проверки новых предложений. С другой стороны укрепление и развитие структуры представляет собой интересный эксперимент проверки существенных финансовых и административных условий. Значимость этих проблем настолько очевидна, что рамки и место обучения кадров обеспечивает широкому кругу (специалистов) участие в формировании дальнейших направлений развития.  Равным образом реализация намеченных плановых заданий обеспечивает широкому кругу (специалистов) участие в формировании модели развития. Товарищи! реализация намеченных плановых заданий требуют определения и уточнения существенных финансовых и административных условий. </string>
+    <string name="def_status">Завершено</string>
+    <string name="back">Назад</string>
+    <string name="age_competitors">Возраст участников</string>
+    <string name="male">Муж</string>
+    <string name="female">Жен</string>
+    <string name="sum">Сумма</string>
+    <string name="def_category">Категория: Дети 6-7лет (2013-2014)</string>
+    <string name="main_statistic">Общая статистика</string>
+    <string name="counties">Страны с конкурентами</string>
+    <string name="clubs">Клубы|организации</string>
+    <string name="opponents">Конкуренты</string>
+    <string name="couches">Тренеры</string>
+    <string name="referees">Судьи</string>
+    <string name="reglamentProgramm">Программа соревнований</string>
+    <string name="mandate">Взвешивание и мандатная комиссия</string>
+    <string name="address">Адрес</string>
+    <string name="judges">Судьи соревнований</string>
+    <string name="protocol">Протокол</string>
+    <string name="protocolUnderLine"><u>Протокол ссылка PDF</u></string>
+    <string name="city">Город</string>
+    <string name="result_text">Спротрсмены, которые прошли  на следующий этап: </string>
+    <string name="def_name">Акматов Азамат Акматович </string>
+    <string name="all_event">Все</string>
+    <string name="best">Лучшие</string>
+    <string name="future">Предстоящие</string>
+    <string name="personal_information">Личные данные</string>
+    <string name="surname">Фамилия</string>
+    <string name="name">Имя</string>
+    <string name="fathername">Отчество</string>
+    <string name="contact_information">Контактные данные</string>
+    <string name="_01_01_2000">xxxxxxxx</string>
+    <string name="professional_information">Профессиональные данные</string>
+    <string name="sport_category">Олимпийские виды спорта</string>
+    <string name="organization">Организация</string>
+    <string name="plus_points">+3 балла</string>
+    <string name="save">Сохранить</string>
+    <string name="delete">Сбросить</string>
+    <string name="def_error">Ваш запрос на регистрацию отправлен к администратaру </string>
+    <string name="my">Мои</string>
+    <string name="submit">Подать</string>
+    <string name="our_choice">Наш выбор</string>
+    <string name="ufc">Бокс</string>
+    <string name="def_sport_subtitle">Контактный вид спорта, единоборство</string>
+    <string name="national_sports">Национальные виды спорта</string>
+    <string name="olympic_sports">Олимпийские виды спорта</string>
+    <string name="not_olympic">Неолипийские виды спорта</string>
+    <string name="para_surdo">Виды спорт пара и сурдо (Ловз)</string>
+    <string name="about_us">О нас</string>
+    <string name="about_us_text">Разнообразный и богатый опыт новая модель организационной деятельности
+        позволяет выполнять важные задания по разработке форм развития. С другой стороны постоянное
+        информационно-пропагандистское обеспечение нашей деятельности влечет за собой процесс внедрения
+        и модернизации модели развития. Значимость этих проблем настолько очевидна, что укрепление
+        и развитие структуры играет важную роль в формировании новых предложений. Равным образом консультация
+        с широким активом играет важную роль в формировании позиций, занимаемых участниками в отношении поставленных задач.
+        Повседневная практика показывает, что дальнейшее развитие различных форм деятельности способствует подготовки и реализации
+        соответствующий условий активизации. Таким образом начало повседневной работы по формированию позиции позволяет оценить
+        значение модели развития. С другой стороны укрепление и развитие структуры влечет за собой процесс внедрения и модернизации
+        новых предложений. Равным образом начало повседневной работы по формированию позиции влечет за собой процесс внедрения и
+        модернизации модели развития. </string>
+    <string name="all_btn"> <u> Все</u></string>
+    <string name="submit_application">Подать заявку</string>
+    <string name="def_history">Федерация баскетбола Кыргызской Республики. Основана в 1992 году. Место в рейтинге FIBA — 116. Место в рейтинге FIBA 3×3 — 35</string>
+    <string name="contacts">Контакты:</string>
+    <string name="contact">Контакты</string>
+    <string name="def_number"><u> +996707999006</u></string>
+    <string name="general">Генеральный секретарь:</string>
+    <string name="other">Председатель судейской коллегии:</string>
+    <string name="filter">Фильтровать</string>
+    <string name="commandUnderLine"> <u>Команда ссылка в PDF</u></string>
+</resources>

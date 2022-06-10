@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.event.about.participants.ParticipantsFragment">
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipe_refresh_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <SearchView
+                    android:id="@+id/searchParticipant"
+                    style="@style/btn_text_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_margin="@dimen/text_margin"
+                    android:background="@drawable/btn_white_corners"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    android:queryHint="Найти участника"
+                    android:searchIcon="@drawable/ic_search" />
+
+                <include
+                    android:id="@+id/progress_bar"
+                    layout="@layout/progress_bar"
+                    android:visibility="gone"
+                    app:layout_constraintTop_toBottomOf="@+id/searchParticipant" />
+
+                <TableLayout
+                    android:id="@+id/table1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:layout_margin="@dimen/text_margin"
+                    android:stretchColumns="*"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/searchParticipant">
+
+                    <TableRow
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/border">
+
+                        <TextView
+                            style="@style/table_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.3"
+                            android:background="@drawable/border"
+                            android:text="ФИО" />
+
+                        <TextView
+                            style="@style/table_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="1.5"
+                            android:background="@drawable/border"
+                            android:text="@string/city" />
+
+                        <TextView
+                            style="@style/table_text"
+                            android:layout_width="0dp"
+                            android:layout_weight="2.3"
+                            android:background="@drawable/border"
+                            android:text="Организация" />
+
+                    </TableRow>
+
+                </TableLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/eventParticipantsRecycler"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/text_margin"
+                    android:layout_marginRight="@dimen/text_margin"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/table1"
+                    tools:listitem="@layout/sportsman_item" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.core.widget.NestedScrollView>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

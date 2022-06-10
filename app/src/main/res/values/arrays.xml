@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="genders">
+        <item>Пол</item>
+        <item> Мужчина</item>
+        <item>Женщина</item>
+    </string-array>
+    <string-array name="region" >
+        <item>Регион</item>
+        <item>Чуй</item>
+        <item>Жалал-Абад</item>
+        <item>Ыссык-Куль</item>
+        <item>Нарын</item>
+        <item>Ош</item>
+        <item>Баткен</item>
+        <item>Талас</item>
+    </string-array>
+</resources>

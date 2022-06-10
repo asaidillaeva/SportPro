@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    tools:context=".ui.home.sport.FederationFragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/historyOfFederationTv"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:fontFamily="@font/lato_text"
+            android:gravity="start"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/def_history" />
+
+
+        <TextView
+            android:id="@+id/textView5"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/text_margin"
+            android:fontFamily="@font/lato_big"
+            android:text="@string/contacts"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/historyOfFederationTv" />
+
+        <TextView
+            android:id="@+id/addressTv"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginTop="9dp"
+            android:gravity="left"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView5"
+            tools:text="пр.Манаса 54, Спорт Арена " />
+
+
+        <TextView
+            android:id="@+id/contactTv"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginTop="6dp"
+            android:gravity="left"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/addressTv"
+            tools:text="тел. (факс): +996 312 542042" />
+        <TextView
+            android:id="@+id/emailTv"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginTop="9dp"
+            android:gravity="left"
+            android:textSize="18sp"
+            android:textColor="@color/red"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/contactTv"
+            tools:text="e-mail: basketfedkg@gmail.com" />
+
+        <TextView
+            android:id="@+id/textView6"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:fontFamily="@font/lato_big"
+            android:text="@string/general"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/emailTv" />
+        <TextView
+            android:id="@+id/generalAssistantTv"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginTop="9dp"
+            android:gravity="left"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView6"
+            tools:text="Пехов Евгений Анатольевич" />
+
+        <TextView
+            android:id="@+id/generalAssistantContactsTv"
+            style="@style/text_long"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/text_margin"
+            android:layout_marginTop="9dp"
+            android:gravity="left"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/generalAssistantTv"
+            tools:text="(+996) 555 254878" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

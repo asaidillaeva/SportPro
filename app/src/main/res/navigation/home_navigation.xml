@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/home_navigation"
+    app:startDestination="@id/aboutSportFragment">
+    <fragment
+        android:id="@+id/federationFragment"
+        android:name="com.kotlin.sportpro.ui.home.sport.FederationFragment"
+        android:label="fragment_federation"
+        tools:layout="@layout/fragment_federation" />
+    <fragment
+        android:id="@+id/aboutSportFragment"
+        android:name="com.kotlin.sportpro.ui.home.sport.AboutSportFragment"
+        android:label="fragment_about_sport"
+        tools:layout="@layout/fragment_about_sport" />
+    <fragment
+        android:id="@+id/newsSportFragment"
+        android:name="com.kotlin.sportpro.ui.home.sport.NewsSportFragment"
+        android:label="fragment_news_sport"
+        tools:layout="@layout/fragment_news_sport" />
+    <fragment
+        android:id="@+id/eventsSportFragment"
+        android:name="com.kotlin.sportpro.ui.home.sport.EventSportFragment"
+        android:label="fragment_events_sport"
+        tools:layout="@layout/fragment_events_sport" />
+</navigation>

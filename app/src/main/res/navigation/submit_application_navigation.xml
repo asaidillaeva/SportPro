@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/submit_application_navigation"
+    app:startDestination="@id/aboutEventFragment">
+
+    <fragment
+        android:id="@+id/aboutEventFragment"
+        android:name="com.kotlin.sportpro.ui.profile.coach.event.AboutEventFragment"
+        tools:layout="@layout/fragment_about_event"
+        android:label="AboutEventFragment" >
+        <action
+            android:id="@+id/action_aboutEventFragment_to_submitSportsmanFragment"
+            app:destination="@id/submitSportsmanFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/submitSportsmanFragment"
+        android:name="com.kotlin.sportpro.ui.profile.coach.event.SubmitSportsmanFragment"
+        android:label="fragment_submit_sportsman"
+        tools:layout="@layout/fragment_submit_sportsman" >
+        <argument
+            android:name="eventcategory"
+            app:argType="string"
+            android:defaultValue="Взрослые" />
+    </fragment>
+</navigation>

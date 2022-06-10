@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/homeFragment">
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.kotlin.sportpro.ui.home.HomeFragment"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/newsFragment"
+        android:name="com.kotlin.sportpro.ui.news.NewsFragment"
+        tools:layout="@layout/fragment_news">
+        <action
+            android:id="@+id/action_newsFragment_to_aboutNewsActivity"
+            app:destination="@id/aboutNewsActivity">
+            <argument
+                android:name="news_id"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/eventFragment"
+        android:name="com.kotlin.sportpro.ui.event.EventFragment"
+        tools:layout="@layout/fragment_event">
+
+        <action
+            android:id="@+id/action_eventFragment_to_event_navigation"
+            app:destination="@id/event_navigation" >
+            <argument
+                android:name="eventId"
+                android:defaultValue="1"
+                app:argType="integer" />
+        </action>
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.kotlin.sportpro.ui.profile.ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profileFragment_to_sportsmanFragment"
+            app:destination="@id/sportsmanNavigation" />
+        <action
+            android:id="@+id/action_profileFragment_to_judgeFragment"
+            app:destination="@id/judgeNavigation" />
+        <action
+            android:id="@+id/action_profileFragment_to_coachFragment"
+            app:destination="@id/coachFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.kotlin.sportpro.ui.profile.login.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/profileFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <include app:graph="@navigation/event_navigation">
+
+        <argument
+            android:name="competition_id"
+            app:argType="integer" />
+    </include>
+    <activity
+        android:id="@+id/aboutNewsActivity"
+        android:name="com.kotlin.sportpro.ui.news.about.AboutNewsActivity"
+        android:label="activity_about_news"
+        tools:layout="@layout/activity_about_news" />
+    <navigation android:id="@+id/judgeNavigation"
+        app:startDestination="@id/judgeFragment">
+        <fragment
+            android:id="@+id/judgeFragment"
+            android:name="com.kotlin.sportpro.ui.profile.judge.JudgeFragment"
+            android:label="JudgeFragment"
+            tools:layout="@layout/fragment_judge">
+            <action
+                android:id="@+id/action_judgeFragment_to_profileFragment"
+                app:destination="@id/profileFragment" />
+            <action
+                android:id="@+id/action_judgeFragment_to_loginFragment"
+                app:destination="@id/loginFragment" />
+            <action
+                android:id="@+id/action_judgeFragment_to_tournamentTableFragment2"
+                app:destination="@id/tournamentTableFragment2" />
+        </fragment>
+        <fragment
+            android:id="@+id/tournamentTableFragment2"
+            android:name="com.kotlin.sportpro.ui.event.about.tournament.TournamentTableFragment"
+            android:label="fragment_tournament_table"
+            tools:layout="@layout/fragment_tournament_table" >
+            <action
+                android:id="@+id/action_tournamentTableFragment2_to_judgingFragment"
+                app:destination="@id/judgingFragment" />
+            <argument
+                android:name="eventId"
+                app:argType="integer"
+                android:defaultValue="0" />
+        </fragment>
+        <fragment
+            android:id="@+id/judgingFragment"
+            android:name="com.kotlin.sportpro.ui.profile.judge.JudgingFragment"
+            android:label="fragment_judging"
+            tools:layout="@layout/fragment_judging" />
+    </navigation>
+    <navigation android:id="@+id/sportsmanNavigation"
+        app:startDestination="@id/sportsmanFragment">
+        <fragment
+            android:id="@+id/sportsmanFragment"
+            android:name="com.kotlin.sportpro.ui.profile.sportsman.SportsmanFragment"
+            android:label="fragment_sportsman"
+            tools:layout="@layout/fragment_sportsman">
+            <action
+                android:id="@+id/action_sportsmanFragment_to_profileFragment"
+                app:destination="@id/profileFragment" />
+            <action
+                android:id="@+id/action_sportsmanFragment_to_loginFragment"
+                app:destination="@id/loginFragment" />
+        </fragment>
+    </navigation>
+    <fragment
+        android:id="@+id/coachFragment"
+        android:name="com.kotlin.sportpro.ui.profile.coach.CoachFragment"
+        tools:layout="@layout/fragment_coach"
+        android:label="CoachFragment" >
+        <action
+            android:id="@+id/action_coachFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+        <action
+            android:id="@+id/action_coachFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+</navigation>
