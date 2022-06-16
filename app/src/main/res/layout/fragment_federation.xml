@@ -22,7 +22,7 @@
             android:textAlignment="textStart"
             android:textSize="18sp"
             app:layout_constraintTop_toTopOf="parent"
-            tools:text="@string/def_history" />
+            android:text="@string/def_history" />
 
 
         <TextView
@@ -50,7 +50,7 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5"
-            tools:text="пр.Манаса 54, Спорт Арена " />
+            android:text="пр.Манаса 54, Спорт Арена " />
 
 
         <TextView
@@ -64,7 +64,7 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/addressTv"
-            tools:text="тел. (факс): +996 312 542042" />
+            android:text="тел. (факс): +996 312 542042" />
         <TextView
             android:id="@+id/emailTv"
             style="@style/text_long"
@@ -77,7 +77,7 @@
             android:textColor="@color/red"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/contactTv"
-            tools:text="e-mail: basketfedkg@gmail.com" />
+            android:text="e-mail: basketfedkg@gmail.com" />
 
         <TextView
             android:id="@+id/textView6"
@@ -104,7 +104,7 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6"
-            tools:text="Пехов Евгений Анатольевич" />
+            android:text="Пехов Евгений Анатольевич" />
 
         <TextView
             android:id="@+id/generalAssistantContactsTv"
@@ -117,6 +117,6 @@
             android:textSize="18sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/generalAssistantTv"
-            tools:text="(+996) 555 254878" />
+            android:text="(+996) 555 254878" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

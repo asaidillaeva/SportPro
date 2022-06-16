@@ -25,11 +25,11 @@
         <ImageView
             android:id="@+id/profilePhotoCard"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:scaleType="fitXY"
-            android:background="@color/white"
+            android:layout_height="wrap_content"
             android:layout_gravity="fill"
-            android:src="@drawable/ic_user"/>
+            android:scaleType="center"
+            android:background="@color/white"
+            android:src="@drawable/ic_user" />
     </androidx.cardview.widget.CardView>
 
     <TextView

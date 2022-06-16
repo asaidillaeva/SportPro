@@ -29,7 +29,7 @@
     <string name="male">Муж</string>
     <string name="female">Жен</string>
     <string name="sum">Сумма</string>
-    <string name="def_category">Категория: Дети 6-7лет (2013-2014)</string>
+    <string name="def_category">Категория:</string>
     <string name="main_statistic">Общая статистика</string>
     <string name="counties">Страны с конкурентами</string>
     <string name="clubs">Клубы|организации</string>
@@ -84,7 +84,7 @@
         модернизации модели развития. </string>
     <string name="all_btn"> <u> Все</u></string>
     <string name="submit_application">Подать заявку</string>
-    <string name="def_history">Федерация баскетбола Кыргызской Республики. Основана в 1992 году. Место в рейтинге FIBA — 116. Место в рейтинге FIBA 3×3 — 35</string>
+    <string name="def_history">Федерация дзюдо Кыргызской Республики. Основана в 1992 году. Место в рейтинге FIBA — 116. Место в рейтинге FIBA 3×3 — 35</string>
     <string name="contacts">Контакты:</string>
     <string name="contact">Контакты</string>
     <string name="def_number"><u> +996707999006</u></string>

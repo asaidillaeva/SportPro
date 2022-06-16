@@ -1,5 +1,6 @@
 package com.kotlin.sportpro.ui.profile
 
+import android.net.Uri
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.liveData
@@ -16,12 +17,19 @@ import retrofit2.Response
 class UserViewModel(private val userRepository: UserRepository) :
     ViewModel() {
     val codeResponse = MutableLiveData<Response<Void>>()
+    var photo: String = ""
 
 
     fun getUserByPhoneNumber(phone: String) = liveData {
         emit(ApiResult.Loading)
         val result = userRepository.getUserByPhone(phone)
         emit(result)
+    }
+
+    fun updateAvatar(uri: Uri?) {
+        if (uri != null) {
+            photo = uri.path!!
+        }
     }
 
     fun login(body: LoginRequestBody) = liveData {

@@ -36,7 +36,7 @@ class ResultAdapter :
             holder.itemView.resultNameTv.text =
                 result.winner.name + " " + result.winner.surname
             holder.itemView.resultAgeTv.text = result.winner.age.toString()
-            holder.itemView.resultCategoryTv.text = result.winner.weight.toString() + "кг"
+            holder.itemView.resultCategoryTv.text = "78 кг"
 
 //            holder.itemView.resultCityTv.text = result.winner.
             holder.itemView.resultPlaceTv.text = result.score.toString()

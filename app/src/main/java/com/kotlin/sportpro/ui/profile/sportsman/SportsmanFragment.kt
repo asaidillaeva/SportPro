@@ -43,7 +43,6 @@ class SportsmanFragment : Fragment() {
         InjectorObject.getSportViewModelFactory()
     }
 
-
     private val tournamentViewModel: TournamentViewModel by viewModels {
         InjectorObject.getTournamentViewModel()
     }
@@ -53,7 +52,7 @@ class SportsmanFragment : Fragment() {
             id = 56,
             name = "Султан",
             surname = "Ахмедов",
-            middlename = "-",
+            middlename = "",
             photo = "https://docs.google.com/uc?id=1pWXRq6gvawofwPEoiq_19Qs3bsOuLXhy",
             age = 27,
             sex = "Мужчина",
@@ -140,7 +139,7 @@ class SportsmanFragment : Fragment() {
     }
 
     private fun initRecycler() {
-        viewModel.getEventsByPlayerId(currentUser.id!!).observe(viewLifecycleOwner) {
+        viewModel.getEventsBySportId(1).observe(viewLifecycleOwner) {
             when (it) {
                 is ApiResult.Success -> {
                     progress_bar.visibility = View.GONE
@@ -171,7 +170,7 @@ class SportsmanFragment : Fragment() {
             }
             else -> {
                 var list = listOf<Event>()
-                viewModel.getEventsByPlayerId(currentUser.id!!).observe(viewLifecycleOwner) {
+                viewModel.getEventsBySportId(1).observe(viewLifecycleOwner) {
                     when (it) {
                         is ApiResult.Success -> {
                             progress_bar.visibility = View.GONE
@@ -216,20 +215,18 @@ class SportsmanFragment : Fragment() {
 
     private fun init(user: User) {
         profileName.text = "${user.surname} ${user.name} ${user.middlename}"
-        profileRoleSport.text = "Спортсмен по ${user.sport}"
+        profileRoleSport.text = "Спортсмен по дзюдо"
 
-        sportViewModel.getSportById(currentUser.user.sport).observe(viewLifecycleOwner) {
+        sportViewModel.getSportById(1).observe(viewLifecycleOwner) {
             when (it) {
                 is ApiResult.Success -> {
-                    profileRoleSport.text = "Тренер по ${it.data.name}"
+                    profileRoleSport.text = "Спортсмен по дзюдо"
                 }
             }
         }
 
         Glide.with(requireActivity())
-            .load(user.photo)
-            .placeholder(R.drawable.ic_user)
-            .error(R.drawable.ic_user)
+            .load("http://knews.kg/wp-content/uploads/2016/02/02.jpg")
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
             .skipMemoryCache(true)
             .override(400, 160)

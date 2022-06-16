@@ -64,10 +64,12 @@ class CoachFragment : Fragment() {
 //                is ApiResult.Success -> {
 //                    init(it.data)
 //                }
+
 //                is ApiResult.Error -> {
 //                    Toast.makeText(context, "Ошибка", Toast.LENGTH_LONG).show()
 //                    Log.e("CoachFragment getUser", it.throwable.message.toString())
 //                }
+
 //                is ApiResult.Loading -> {
 //                }
 //            }
@@ -86,7 +88,7 @@ class CoachFragment : Fragment() {
     }
 
     private fun init(user: User) {
-        profileName.text = user.surname +" " + user.name+ " " + user.middlename
+        profileName.text = "Тилек Сыдыков"
         profileRoleSport.text = "Тренер по " + user.sport
 
         sportViewModel.getSportById(viewModel.getCurrentUser().sport).observe(viewLifecycleOwner) {
@@ -99,13 +101,14 @@ class CoachFragment : Fragment() {
 
 
         Glide.with(requireActivity())
-            .load(user.photo)
+            .load("https://24.kg/files/media/57/57999.jpg")
             .placeholder(R.drawable.ic_user)
             .error(R.drawable.ic_user)
             .diskCacheStrategy(DiskCacheStrategy.AUTOMATIC)
             .skipMemoryCache(true)
             .override(400, 160)
             .into(profilePhotoCard)
+        
     }
 
     private fun initPagerAdapter() {

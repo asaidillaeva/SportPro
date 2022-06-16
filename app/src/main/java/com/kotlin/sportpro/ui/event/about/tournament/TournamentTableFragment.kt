@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import com.kotlin.sportpro.R
 import com.kotlin.sportpro.data.model.grid.Result
 import com.kotlin.sportpro.data.model.Stage
@@ -20,6 +21,7 @@ import kotlinx.android.synthetic.main.fragment_tournament_table.*
 
 class TournamentTableFragment : Fragment() {
 
+    private var mType: String = ""
     private val stageAdapter = StageAdapter()
     private val tournamentAdapter = TournamentAdapter()
     private var list = mutableListOf<MutableList<Tournament>>()
@@ -49,6 +51,14 @@ class TournamentTableFragment : Fragment() {
 
         tournamentRecycler.adapter = tournamentAdapter
 
+        tournamentAdapter.onMatch1Click = {
+            val action = TournamentTableFragmentDirections.actionTournamentTableFragment2ToJudgingFragment()
+            findNavController().navigate(action)
+        }
+        tournamentAdapter.onMatch2Click = {
+            val action = TournamentTableFragmentDirections.actionTournamentTableFragment2ToJudgingFragment()
+            findNavController().navigate(action)
+        }
 
         tournamentAdapter.onPreviousItemClick = {
             stagePosition--
@@ -62,7 +72,11 @@ class TournamentTableFragment : Fragment() {
             tournamentAdapter.submitList(list[stagePosition])
         }
 
-        val id: Int = requireActivity().intent.extras?.get("eventId") as Int
+        var id: Int = (requireActivity().intent.extras?.get("eventId") ?: -1) as Int
+        if (id == -1) {
+            mType = "judge"
+            id = 4
+        }
         viewModel.getGridByEventId(id).observe(viewLifecycleOwner) {
             when (it) {
                 is ApiResult.Success -> {
@@ -120,16 +134,16 @@ class TournamentTableFragment : Fragment() {
             for (t in results[i].matches!!.indices step 2) {
                 val match1 = results[i].matches?.get(t)!!
                 var match2: Matche? = null
-                if(results[i].matches?.size !=1) {
+                if (results[i].matches?.size != 1) {
                     match2 = results[i].matches!![t + 1]
                 }
                 var hasPrevious = false
-                if (i != results.size-1) {
+                if (i != results.size - 1) {
                     hasPrevious = true
                 }
 
                 var hasNext = true
-                if (i == 0 ) {
+                if (i == 0) {
                     hasNext = false
                 }
 
@@ -159,10 +173,10 @@ class TournamentTableFragment : Fragment() {
         } else {
             for (i in results!!.indices) {
                 var onFocus = false
-                if (i == results!!.size-1) onFocus = true
+                if (i == results!!.size - 1) onFocus = true
                 list.add(Stage(results[i].id, results[i].stage.toString(), onFocus))
             }
         }
         return list.asReversed()
-    } 
+    }
 }

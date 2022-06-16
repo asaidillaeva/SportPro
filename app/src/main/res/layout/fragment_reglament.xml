@@ -60,7 +60,7 @@
             android:layout_marginLeft="@dimen/text_margin"
             android:layout_marginTop="6dp"
             android:gravity="left"
-            android:text="16 июля с 09:00 до 22:00"
+            tools:text="16 июля с 09:00 до 22:00"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView5" />
 
@@ -85,7 +85,7 @@
             android:layout_marginLeft="@dimen/text_margin"
             android:layout_marginTop="6dp"
             android:gravity="left"
-            android:text="пр.Манаса 54, Спорт Арена"
+            tools:text="пр.Манаса 54, Спорт Арена"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView6" />
 

@@ -10,7 +10,7 @@ data class Player(
     @SerializedName("organization")
     val organization: String,
     @SerializedName("photo")
-    val photo: String,
+    var photo: String,
     @SerializedName("trainer")
     val trainer: Int,
     @SerializedName("user")

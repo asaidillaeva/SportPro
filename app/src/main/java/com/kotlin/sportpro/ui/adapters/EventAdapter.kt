@@ -1,6 +1,7 @@
 package com.kotlin.sportpro.ui.adapters
 
 import android.graphics.Bitmap
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -72,7 +73,8 @@ class EventAdapter :
                 .into(holder.itemView.eventImage)
 
             holder.itemView.setOnClickListener {
-                onItemClick(event.id!!)
+                Log.e("EventAdapter", event.id.toString())
+                onItemClick(4)
             }
         }
     }

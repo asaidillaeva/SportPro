@@ -54,6 +54,9 @@ class ResultsFragment : Fragment() {
     }
 
     private fun makeList(list: List<Result>){
+        if(list.isEmpty()){
+            return
+        }
         var listOfWinners: MutableList<CustomResult> = arrayListOf()
         for (i in list.indices) {
             for (t in list[i].matches?.indices!!)

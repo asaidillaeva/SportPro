@@ -104,7 +104,7 @@ class SubmitSportsmanFragment : Fragment() {
         val ok: TextView? = view1.findViewById(R.id.onPositive)
         ok?.setOnClickListener {
             alert?.dismiss()
-            requireActivity().finish()
+
         }
     }
 

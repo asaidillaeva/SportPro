@@ -8,6 +8,7 @@ import androidx.recyclerview.widget.ListAdapter
 import com.kotlin.sportpro.R
 import com.kotlin.sportpro.data.model.Stage
 import kotlinx.android.synthetic.main.button_item.view.*
+import kotlinx.android.synthetic.main.tournament_item.view.*
 
 class StageAdapter : ListAdapter<Stage, MyViewHolder>(DIFF_CALLBACK) {
     object DIFF_CALLBACK : DiffUtil.ItemCallback<Stage>() {
@@ -61,6 +62,7 @@ class StageAdapter : ListAdapter<Stage, MyViewHolder>(DIFF_CALLBACK) {
                 onItemClick(position)
                 focusOn(position)
             }
+
         }
     }
 

@@ -173,4 +173,13 @@
 
     <style name="spinner_item"></style>
 
+    <style name="AppAutoCompeteEditText" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense.ExposedDropdownMenu">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="hintTextColor">@color/dark_gray</item>
+        <item name="android:textSize">16sp</item>
+        <item name="boxStrokeColor">@color/dark_gray</item>
+        <item name="endIconTint">@color/dark_gray</item>
+    </style>
 </resources>

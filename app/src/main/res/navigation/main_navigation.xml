@@ -95,16 +95,16 @@
             <action
                 android:id="@+id/action_tournamentTableFragment2_to_judgingFragment"
                 app:destination="@id/judgingFragment" />
-            <argument
-                android:name="eventId"
-                app:argType="integer"
-                android:defaultValue="0" />
         </fragment>
         <fragment
             android:id="@+id/judgingFragment"
             android:name="com.kotlin.sportpro.ui.profile.judge.JudgingFragment"
             android:label="fragment_judging"
-            tools:layout="@layout/fragment_judging" />
+            tools:layout="@layout/fragment_judging" >
+            <action
+                android:id="@+id/action_judgingFragment_to_judgeFragment"
+                app:destination="@id/judgeFragment" />
+        </fragment>
     </navigation>
     <navigation android:id="@+id/sportsmanNavigation"
         app:startDestination="@id/sportsmanFragment">

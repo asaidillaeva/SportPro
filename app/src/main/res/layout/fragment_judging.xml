@@ -100,7 +100,7 @@
                         app:layout_constraintEnd_toStartOf="@+id/match1PlayerScore1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Арстанбек уулу Ильгиз" />
+                        android:text="Акулович Демирбай" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -113,7 +113,7 @@
                 android:layout_margin="@dimen/text_margin"
                 android:background="@drawable/white_background"
                 android:gravity="center"
-                android:text="98"
+                android:text="0"
                 android:textColor="@color/red"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"
@@ -232,7 +232,7 @@
                         app:layout_constraintEnd_toStartOf="@+id/match1PlayerScore1"
                         app:layout_constraintStart_toStartOf="parent"
                         app:layout_constraintTop_toTopOf="parent"
-                        tools:text="Арстанбек уулу Ильгиз" />
+                        android:text="Шербачков Алексей" />
 
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -245,7 +245,7 @@
                 android:layout_margin="@dimen/text_margin"
                 android:background="@drawable/white_background"
                 android:gravity="center"
-                android:text="98"
+                android:text="0"
                 android:textColor="@color/red"
                 android:textSize="18sp"
                 app:layout_constraintEnd_toEndOf="parent"

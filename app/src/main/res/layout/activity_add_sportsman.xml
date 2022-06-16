@@ -63,45 +63,29 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <androidx.cardview.widget.CardView
+            <com.makeramen.roundedimageview.RoundedImageView
                 android:id="@+id/profilePhotoCard"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="30dp"
-                android:backgroundTint="@color/white"
-                android:elevation="12dp"
-                android:innerRadius="0dp"
-                android:shape="ring"
-                android:thicknessRatio="1.9"
-                app:cardCornerRadius="50dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="32dp"
+                android:clickable="true"
+                android:focusable="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_user"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent">
-
-                <ImageView
-                    android:id="@+id/profilePhoto"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:backgroundTint="@color/white"
-                    android:scaleType="centerCrop"
-                    android:padding="@dimen/text_margin"
-                    android:src="@drawable/ic_user" />
-            </androidx.cardview.widget.CardView>
-
+                app:layout_constraintTop_toTopOf="parent"
+                app:riv_corner_radius="50dip" />
 
             <TextView
-                android:id="@+id/textView9"
-                style="@style/tab_text"
-                android:layout_width="wrap_content"
+                android:id="@+id/addPhoto"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="@dimen/text_margin"
-                android:text="@string/personal_information"
-                android:textSize="20sp"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/profilePhotoCard" />
+                android:padding="10dp"
+                android:text="Добавить фото"
+                android:textAlignment="center"
+                app:layout_constraintTop_toBottomOf="@+id/profilePhotoCard" />
 
             <EditText
                 android:id="@+id/surnameText"
@@ -111,7 +95,7 @@
                 android:hint="@string/surname"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/textView9" />
+                app:layout_constraintTop_toBottomOf="@+id/addPhoto" />
 
             <EditText
                 android:id="@+id/nameText"
@@ -140,33 +124,33 @@
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:hint="Возраст"
-                android:inputType="numberDecimal"
+                android:inputType="number"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/middlenameText" />
 
 
-            <Spinner
-                android:id="@+id/genderSpinner"
-                style="@style/SpinnerTheme"
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_gender"
+                style="@style/AppAutoCompeteEditText"
                 android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_margin="@dimen/text_margin"
-                android:entries="@array/genders"
-                android:spinnerMode="dropdown"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:layout_marginTop="8dp"
+                android:hint="Пол"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ageText" />
+                app:layout_constraintTop_toBottomOf="@id/ageText">
 
-            <TextView
-                android:id="@+id/genderTv"
-                style="@style/edit_text_on_black"
-                android:layout_width="match_parent"
-                android:layout_height="44dp"
-                android:layout_margin="@dimen/text_margin"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/ageText" />
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/edit_gender"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="none"
+                    android:textColor="@color/white"
+                    android:textSize="16sp" />
+
+            </com.google.android.material.textfield.TextInputLayout>
 
 
             <EditText
@@ -175,9 +159,10 @@
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:hint="@string/phone_number"
+                android:inputType="numberDecimal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/genderSpinner" />
+                app:layout_constraintTop_toBottomOf="@id/til_gender" />
 
             <br.com.sapereaude.maskedEditText.MaskedEditText
                 android:id="@+id/weightProfile"
@@ -185,6 +170,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="44dp"
                 android:hint="68"
+                android:inputType="numberDecimal"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/phoneNumberProfile"
@@ -199,8 +185,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/weightProfile" />
-
-
 
 
             <Button

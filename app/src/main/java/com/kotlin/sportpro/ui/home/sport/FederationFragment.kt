@@ -32,23 +32,23 @@ class FederationFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val id = activity?.intent?.extras?.get("sportId") as Int
-        sportViewModel.getFederationBySportId(id).observe(viewLifecycleOwner) {
-            when (it) {
-                is ApiResult.Success -> {
-                    Toast.makeText(context, "Success", Toast.LENGTH_LONG)
-                    init(it.data)
-                }
-                is ApiResult.Error -> {
-                    Toast.makeText(context, "Ошибка", Toast.LENGTH_LONG)
-                    Log.e("Sport  Error", it.throwable.message.toString())
-                }
-                is ApiResult.Loading -> {
-                    Toast.makeText(context, "Loading", Toast.LENGTH_LONG)
-
-                }
-            }
-        }
+//        val id = activity?.intent?.extras?.get("sportId") as Int
+//        sportViewModel.getFederationBySportId(id).observe(viewLifecycleOwner) {
+//            when (it) {
+//                is ApiResult.Success -> {
+//                    Toast.makeText(context, "Success", Toast.LENGTH_LONG)
+////                    init(it.data)
+//                }
+//                is ApiResult.Error -> {
+//                    Toast.makeText(context, "Ошибка", Toast.LENGTH_LONG)
+//                    Log.e("Sport  Error", it.throwable.message.toString())
+//                }
+//                is ApiResult.Loading -> {
+//                    Toast.makeText(context, "Loading", Toast.LENGTH_LONG)
+//
+//                }
+//            }
+//        }
     }
 
     private fun init(federation: Federation) {
